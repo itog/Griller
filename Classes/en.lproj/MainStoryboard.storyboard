@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZkC-a9-sfZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tyv-Cs-qW1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efg-nY-bFi">
+                                <rect key="frame" x="80" y="36" width="160" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="X5N-9j-aa1"/>
+                                </constraints>
+                                <state key="normal" title="Find">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="find:" destination="2" eventType="touchUpInside" id="0fM-I5-6N8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyO-91-f8U">
+                                <rect key="frame" x="50" y="480" width="33" height="30"/>
+                                <state key="normal" title="20%">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLedBlightness20:" destination="2" eventType="touchUpInside" id="fNw-pC-QZK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLQ-dY-A1d">
+                                <rect key="frame" x="50" y="182" width="33" height="30"/>
+                                <state key="normal" title="20%">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLedBlightness20:" destination="2" eventType="touchUpInside" id="91y-KI-0LB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BBR-rp-sJm">
+                                <rect key="frame" x="240" y="480" width="33" height="30"/>
+                                <state key="normal" title="80%">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLedBlightness80:" destination="2" eventType="touchUpInside" id="X2C-VM-TE0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqz-p9-RHg">
+                                <rect key="frame" x="240" y="182" width="33" height="30"/>
+                                <state key="normal" title="80%">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLedBlightness80:" destination="2" eventType="touchUpInside" id="maF-yc-3es"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwd-OZ-2cG">
+                                <rect key="frame" x="144" y="480" width="33" height="30"/>
+                                <state key="normal" title="50%">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLedBlightness50:" destination="2" eventType="touchUpInside" id="pSe-co-OID"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NM2-ae-eqW">
+                                <rect key="frame" x="144" y="182" width="33" height="30"/>
+                                <state key="normal" title="50%">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeLedBlightness50:" destination="2" eventType="touchUpInside" id="aMp-2L-DV2"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Ready" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ImB-Gc-Qpa">
+                                <rect key="frame" x="136" y="83" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="G8k-1b-2X3">
+                                <rect key="frame" x="37" y="518" width="247" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="TGO-f2-SuH"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeFirePowerBar:" destination="2" eventType="valueChanged" id="STt-Sd-h3i"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="bX3-B1-31x">
+                                <rect key="frame" x="37" y="257" width="247" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="243" id="RGX-LW-Yel"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeRotationSpeedBar:" destination="2" eventType="valueChanged" id="qmX-pF-H23"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Fire power" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGr-h4-53Q">
+                                <rect key="frame" x="20" y="451" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Rotation Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hra-Gb-wxM">
+                                <rect key="frame" x="20" y="153" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fwd-OZ-2cG" firstAttribute="trailing" secondItem="ImB-Gc-Qpa" secondAttribute="trailing" id="1iv-Pw-thy"/>
+                            <constraint firstItem="efg-nY-bFi" firstAttribute="top" secondItem="3" secondAttribute="top" constant="71" id="A2c-jl-9o5"/>
+                            <constraint firstItem="FGr-h4-53Q" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" id="Ag1-Yw-feM"/>
+                            <constraint firstItem="fwd-OZ-2cG" firstAttribute="baseline" secondItem="qyO-91-f8U" secondAttribute="baseline" id="DfO-O7-PGc"/>
+                            <constraint firstItem="G8k-1b-2X3" firstAttribute="centerX" secondItem="fwd-OZ-2cG" secondAttribute="centerX" id="DlX-Kk-xjB"/>
+                            <constraint firstAttribute="trailing" secondItem="BBR-rp-sJm" secondAttribute="trailing" constant="47" id="UJm-cP-jIh"/>
+                            <constraint firstItem="qyO-91-f8U" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="50" id="X2u-iB-vXO"/>
+                            <constraint firstAttribute="bottom" secondItem="G8k-1b-2X3" secondAttribute="bottom" constant="173" id="diJ-s7-UP0"/>
+                            <constraint firstItem="ImB-Gc-Qpa" firstAttribute="top" secondItem="3" secondAttribute="top" constant="139" id="eTh-8h-UBZ"/>
+                            <constraint firstItem="qyO-91-f8U" firstAttribute="top" secondItem="3" secondAttribute="top" constant="273" id="jy8-SG-JJ4"/>
+                            <constraint firstItem="fwd-OZ-2cG" firstAttribute="baseline" secondItem="BBR-rp-sJm" secondAttribute="baseline" id="q7c-8a-1kn"/>
+                            <constraint firstItem="FGr-h4-53Q" firstAttribute="top" secondItem="3" secondAttribute="top" constant="232" id="qpG-rb-9JQ"/>
+                            <constraint firstItem="efg-nY-bFi" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" id="xk1-pc-XsF"/>
+                            <constraint firstItem="efg-nY-bFi" firstAttribute="centerX" secondItem="fwd-OZ-2cG" secondAttribute="centerX" id="zy9-Hh-9oP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firePowerSlider" destination="G8k-1b-2X3" id="Hu5-BZ-VZU"/>
+                        <outlet property="rotationSpeedSlider" destination="bX3-B1-31x" id="fFK-sw-O5u"/>
+                        <outlet property="statusMessage" destination="ImB-Gc-Qpa" id="A20-3r-iBr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
