@@ -24,6 +24,9 @@
     
     [Konashi addObserver:self selector:@selector(connected) name:KONASHI_EVENT_CONNECTED];
     [Konashi addObserver:self selector:@selector(ready) name:KONASHI_EVENT_READY];
+
+    self.firePowerSlider.value = 0;
+    self.rotationSpeedSlider.value = 0;
 }
 
 - (void)didReceiveMemoryWarning
@@ -48,16 +51,31 @@
     [Konashi pwmLedDrive:LED2 dutyRatio:80.0];
 }
 
+CFAbsoluteTime previousTime = 0;
+const float COMMAND_INTERVAL = 0.2;
+
 - (IBAction)changeFirePowerBar:(id)sender {
     NSLog(@"Fire Power: %f", self.firePowerSlider.value);
-    
-    [Konashi pwmLedDrive:LED2 dutyRatio:self.firePowerSlider.value];
+    CFAbsoluteTime currentTime = CFAbsoluteTimeGetCurrent ();
+    if ((currentTime - previousTime) > COMMAND_INTERVAL) {
+        NSLog(@"Rotation speed: %f", self.firePowerSlider.value);
+        [Konashi pwmLedDrive:LED2 dutyRatio:self.firePowerSlider.value];
+        previousTime = currentTime;
+    } else {
+        NSLog(@"skip");
+    }
 }
 
+
 - (IBAction)changeRotationSpeedBar:(id)sender {
-    NSLog(@"Rotation speed: %f", self.rotationSpeedSlider.value);
-    
-    [Konashi pwmLedDrive:LED3 dutyRatio:self.rotationSpeedSlider.value];
+    CFAbsoluteTime currentTime = CFAbsoluteTimeGetCurrent ();
+    if ((currentTime - previousTime) > COMMAND_INTERVAL) {
+        NSLog(@"Rotation speed: %f", self.rotationSpeedSlider.value);
+        [Konashi pwmLedDrive:LED3 dutyRatio:self.rotationSpeedSlider.value];
+        previousTime = currentTime;
+    } else {
+        NSLog(@"skip");
+    }
 }
 
 - (void) connected
@@ -74,10 +92,10 @@
     
     // Drive LED
     [Konashi pwmMode:LED2 mode:KONASHI_PWM_ENABLE_LED_MODE];
-    [Konashi pwmLedDrive:LED2 dutyRatio:50.0];
+    [Konashi pwmLedDrive:LED2 dutyRatio:0.0];
 
     [Konashi pwmMode:LED3 mode:KONASHI_PWM_ENABLE_LED_MODE];
-    [Konashi pwmLedDrive:LED3 dutyRatio:50.0];
+    [Konashi pwmLedDrive:LED3 dutyRatio:0.0];
 
     /*
     //Blink LED (interval: 0.5s)
